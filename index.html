@@ -11,7 +11,7 @@
 </script>
 
 </head> 
-<body> 
+<body style="background-color:seagreen; margin: 10px; text-align:center;"> 
 <h1>What is your favorite spot to travel?</h1> 
 <p>I am building a directory of the sweetest travel destinations.</p>  
 <form name="travel" onsubmit="identify(event)">
@@ -55,6 +55,72 @@
       }
 </script>
     
+    <h1>Track Events</h1> 
+<form name="events" onsubmit="testButton(event)">
+    Event Name:
+    <input name="eventname" required="" size="40" type="text"/> 
+    <br>
+    User ID: 
+    <input name="id_two" required="" size="30" type="text"/> 
+    <br>
+    Email: 
+    <input name="email_two" required="" size="60" type="email"/> 
+    <br>
+    <input name="track" type="submit" value="Track"/>
+</form>
+    <script type="text/javascript">
+    function testButton(e){
+        e.preventDefault();
+        var formtwo = e.target;
+        var eventName = formtwo["eventname"].value;
+        var emailTwo = formtwo["email_two"].value;
+        var idTwo = formtwo["id_two"].value;
+        var usertwo = {
+            email: emailTwo,
+        };
+        analytics.identify(idTwo, usertwo);
+        analytics.track(eventName, usertwo, function() {
+            window.location.href = "";
+        });
+    }
+</script>
+    <h1>Protocols Testing</h1> 
+<button type="button" onclick="unplannedButton(event)">Unplanned Event</button>
+<script type="text/javascript">
+    function unplannedButton(e){
+        analytics.track('Unplanned Event');
+    }
+</script>
+ <button type="button" onclick="schemaViolation(event)">JSON Schema Violation</button>
+<script type="text/javascript">
+    function schemaViolation(e){
+        analytics.track('Destination Submitted', {hometown: 'New York'});
+    }
+</script>
+<h1>Group Calls</h1> 
+<button type="button" onclick="loc(event)">Location Group</button>
+<script type="text/javascript">
+    function loc(e){
+        analytics.group('456', {
+            name: 'My Company',
+            industry: 'Technology',
+            city: 'Chicago',
+            type: 'location_id',
+            id: '123SB'
+        });
+    }
+</script>
+ <button type="button" onclick="acc(event)">Account Group</button>
+<script type="text/javascript">
+    function acc(e){
+        analytics.group('874', {
+            name: 'My Company',
+            industry: 'Technology',
+            type: 'account_id',
+            id: 'A694'
+        });
+    }
+</script>
     
 </body> 
 </html>
