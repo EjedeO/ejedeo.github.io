@@ -88,7 +88,8 @@
 <button type="button" onclick="unplannedButton(event)">planned Event</button>
 <script type="text/javascript">
     function unplannedButton(e){
-        analytics.track('device_low_battery');
+        analytics.track('device_low_battery', {
+  email: 'dsm@hotmail.com'});
     }
 </script>
            <h1>Protocols Testing 2</h1> 
