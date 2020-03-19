@@ -97,6 +97,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
     }
 </script>
+<h1>Identify Testing</h1> 
+<button type="button" onclick="identifyEvent(event)">Identify Event</button>
+<script type="text/javascript">
+function identifyEvent(e){
+analytics.identify('ze8rt1u89', {
+  name: 'Zaphod Kim',
+  gender: 'Male',
+  email: 'jane.kim@example.com',
+  phone: '1-401-826-4421',
+  address: {
+    city: 'San Francisco',
+    state: 'Ca',
+    postalCode: '94107'
+  }
+});  
+ }
+</script>                                    
                                      
                               
     <h1>Protocols Testing</h1> 
