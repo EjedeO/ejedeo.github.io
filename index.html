@@ -61,12 +61,15 @@
       }
 </script>
     
+<button type="button" onclick="anonButton(event)">Anon Identify</button>
 <script type="text/javascript">
-      
-        analytics.identify(, {
+    function anonButton(e){
+       analytics.identify(, {
             deviceId: '123',
             VcMsId: '456'
         });
+    }      
+        
       }
 </script>    
     
