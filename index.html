@@ -60,6 +60,16 @@
         });
       }
 </script>
+    
+<script type="text/javascript">
+      
+        analytics.identify(, {
+            deviceId: '123',
+            VcMsId: '456'
+        });
+      }
+</script>    
+    
 <br>
 <h1>Track Events</h1> 
 <form name="events" onsubmit="testButton(event)">
@@ -143,7 +153,7 @@
 <button type="button" onclick="anon(event)">Anonymous Track</button>
 <script type="text/javascript">
     function anon(e){
-       analytics.track('March 30', {
+       analytics.track('March 31', {
             category: 'clothing',
            email: 'an@email.com'
        });  
