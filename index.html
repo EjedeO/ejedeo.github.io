@@ -92,8 +92,9 @@
         var eventName = formtwo["eventname"].value;
         var emailTwo = formtwo["email_two"].value;
         var idTwo = formtwo["id_two"].value;
-        var usertwo = {
+        var the_properties = {
             email: emailTwo,
+            tonight: "tomorrow",
         };
         analytics.identify(idTwo, usertwo);
         analytics.track(eventName, usertwo, function() {
