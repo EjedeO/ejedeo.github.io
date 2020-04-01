@@ -94,10 +94,10 @@
         var idTwo = formtwo["id_two"].value;
         var the_properties = {
             email: emailTwo,
-            tonight: "tomorrow",
+            tonight: 'tomorrow',
         };
-        analytics.identify(idTwo, usertwo);
-        analytics.track(eventName, usertwo, function() {
+        analytics.identify(idTwo, emailTwo);
+        analytics.track(eventName, the_properties, function() {
             window.location.href = "";
         });
     }
