@@ -106,7 +106,10 @@
 <button type="button" onclick="unplannedButton(event)">Unplanned Event</button>
 <script type="text/javascript">
     function unplannedButton(e){
-        analytics.track('Unplanned Event');
+        analytics.track('Unplanned Event', {
+            email: ,
+            tonight: null,
+        });
     }
 </script>
  <button type="button" onclick="schemaViolation(event)">JSON Schema Violation</button>
