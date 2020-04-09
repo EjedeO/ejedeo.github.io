@@ -14,59 +14,13 @@
 
 </head> 
 <body style="background-color:skyblue; margin: 10px; text-align:center;"> 
-<h1>Form Submission</h1> 
-<form name="travel" onsubmit="identify(event)">
-     What is your favorite travel destination?
-    <input name="destination" required="" size="60" type="text"/> 
-    <br><br>
-    Number of times you have been there: <input name="frequency" size="30" type="number"/>
-    <br><br><br> 
-    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
-    <br><br> 
-    <textarea cols="81" name="details" required="" rows="5">
-    </textarea> 
-    <br><br> 
-    Name: <input name="fullname" required="" size="60" type="text"/> 
-    <br><br> 
-    Email: <input name="email" required="" size="60" type="email"/> 
-    <br><br>
-    User ID: <input name="id" required="" size="30" type="text"/> 
-    <br><br>
-    <input name="submit" type="submit" value="Submit"/>
-</form>
-<script type="text/javascript">
-      function identify(e){
-        e.preventDefault();
-        var form = e.target;
-        var email = form["email"].value;
-        var fullname = form["fullname"].value;
-        var destination = form["destination"].value;
-        var details = form["details"].value;
-        var number = form["frequency"].value;
-        var id = form["id"].value;
-        var user = {
-            email: email, 
-            name: fullname, 
-            destination: destination, 
-            details: details,
-            visits: number
-        };
-        analytics.identify(id, {
-            email: email,
-            name: fullname
-        });
-        analytics.track('Destination Submitted', user, function() {
-            window.location.href = "";
-        });
-      }
-</script>
     
 <button type="button" onclick="anonButton(event)">Anonymous Identify</button>
 <script type="text/javascript">
     function anonButton(e){
        analytics.identify({
-            devicId: '123',
-            VcMsId: '456'
+            idA: '123',
+            idB: '456'
         });
     } 
 </script>    
@@ -85,97 +39,27 @@
     <br>
     <input name="track" type="submit" value="Track"/>
 </form>
+<h1>Protocols</h1> 
+<button type="button" onclick="testEvent(event)">Test Event</button>
 <script type="text/javascript">
-    function testButton(e){
-        e.preventDefault();
-        var formtwo = e.target;
-        var eventName = formtwo["eventname"].value;
-        var emailTwo = formtwo["email_two"].value;
-        var idTwo = formtwo["id_two"].value;
-        var the_properties = {
-            email: emailTwo,
-            tonight: 'tomorrow',
-        };
-        analytics.identify(idTwo, emailTwo);
-        analytics.track(eventName, the_properties, function() {
-            window.location.href = "";
-        });
-    }
-</script>
-<h1>Protocols Testing</h1> 
-<button type="button" onclick="unplannedButton(event)">Unplanned Event</button>
-<script type="text/javascript">
-    function unplannedButton(e){
-        analytics.track('Unplanned Event', 
+    function testEvent(e){
+        analytics.track('Test Event', 
             {
-            email:null, 
-            tomorrow:null});
+            property_a:'property_value'});
     }
 </script>
- <button type="button" onclick="schemaViolation(event)">JSON Schema Violation</button>
-<script type="text/javascript">
-    function schemaViolation(e){
-        analytics.track('Destination Submitted', {hometown: 'New York'});
-    }
-</script>
-<h1>Group Calls</h1> 
-<button type="button" onclick="loc(event)">Location Group</button>
-<script type="text/javascript">
-    function loc(e){
-        analytics.group('123SB', {
-            name: 'My Company',
-            industry: 'Technology',
-            city: 'New York',
-            type: 'location_id',
-            id: '123SB'
-        });
-    }
-</script>
- <button type="button" onclick="acc(event)">Account Group</button>
-<script type="text/javascript">
-    function acc(e){
-        analytics.group('A694', {
-            name: 'My Company',
-            industry: 'Technology',
-            type: 'account_id',
-            id: 'A694'
-        });
-    }
-</script>
-<h1>Page Call with Custom Properties</h1> 
-<button type="button" onclick="page(event)">Page</button>
-<script type="text/javascript">
-    function page(e){
-       analytics.page('Car Feature Added', {
-            vin: '111222333456',
-            model: 'tiguan',
-            photo_added: '1'
-       });  
-    }
 </script>
 </body> 
 <h1>Anonymous User Track Event</h1> 
 <button type="button" onclick="anon(event)">Anonymous Track</button>
 <script type="text/javascript">
     function anon(e){
-       analytics.track('March 31', {
+       analytics.track('April 9', {
             category: 'clothing',
            email: 'an@email.com'
        });  
     }
 </script>
-<h1>Grab braze_id For Anonymous User and Identify</h1> 
-<button type="button" onclick="braze(event)">Braze ID</button>
-<script type="text/javascript">
-   // var deviceid = appboy.getDeviceId(function(deviceId)
-    function braze(e){
-        analytics.identify({
-           test_flag: true
-        },{context: {integrations: {
-           'Braze': {
-               'braze_id': '5e65a780235c1036c27f2b54'
-        }}}});
-    }
-</script>
+
 </body> 
 </html>
