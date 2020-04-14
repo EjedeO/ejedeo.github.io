@@ -96,7 +96,7 @@
             email: emailTwo,
             tonight: 'tomorrow',
         };
-        analytics.identify(idTwo, emailTwo);
+        analytics.identify(idTwo, the_properties);
         analytics.track(eventName, the_properties, function() {
             window.location.href = "";
         });
