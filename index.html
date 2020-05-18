@@ -94,7 +94,9 @@
         var idTwo = formtwo["id_two"].value;
         var the_properties = {
             email: emailTwo,
-            tonight: 'tomorrow',
+            age: '30',
+            weight: '147,
+            nationality: 'polish',
         };
         analytics.identify(idTwo, the_properties);
         analytics.track(eventName, the_properties, function() {
