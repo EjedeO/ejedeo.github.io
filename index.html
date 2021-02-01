@@ -1,192 +1,118 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WTCXF3B');</script>
-<!-- End Google Tag Manager -->
-    
-    <title>Home Questionnaire</title> 
+<html>
+<head>
+  <title>LOLCAT CLOCK</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Covered+By+Your+Grace" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>LOLCAT CLOCK</h1>
+    </header>
+
+    <h4>
+      I CAN HAZ TIME?? <br>
+      <span id="clock">Clock goes here</span>
+    </h4>
+
+    <img id="lolcatImage" src="https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/normalTime.jpg" alt="lolcat">
+
+    <blockquote id="timeEvent">This is where time events are reported</blockquote>
 
 
+    set Wake Up Time
+    <select id="wakeUpTimeSelector">
+      <option value="1">1 AM - 2AM</option>
+      <option value="2">2 AM - 3AM</option>
+      <option value="3">3 AM - 4AM</option>
+      <option value="4">4 AM - 5AM</option>
+      <option value="5">5 AM - 6AM</option>
+      <option value="6">6 AM - 7AM</option>
+      <option value="7">7 AM - 8AM</option>
+      <option value="8" selected>8 AM - 9AM</option>
+      <option value="9">9 AM - 10AM</option>
+      <option value="10">10 AM - 11AM</option>
+      <option value="11">11 AM - 12PM</option>
+      <option value="12">12 PM - 1PM</option>
+      <option value="13">1 PM - 2PM</option>
+      <option value="14">2 PM - 3PM</option>
+      <option value="15">3 PM - 4PM</option>
+      <option value="16">4 PM - 5PM</option>
+      <option value="17">5 PM - 6PM</option>
+      <option value="18">6 PM - 7PM</option>
+      <option value="19">7 PM - 8PM</option>
+      <option value="20">8 PM - 9PM</option>
+      <option value="21">9 PM - 10PM</option>
+      <option value="22">10 PM - 11PM</option>
+      <option value="23">11 PM - 12AM</option>
+      <option value="24">12 AM - 1AM</option>
+    </select>
+    <br>
+    set Lunch Time
+      <select id="lunchTimeSelector">
+        <option value="1">1 AM - 2AM</option>
+        <option value="2">2 AM - 3AM</option>
+        <option value="3">3 AM - 4AM</option>
+        <option value="4">4 AM - 5AM</option>
+        <option value="5">5 AM - 6AM</option>
+        <option value="6">6 AM - 7AM</option>
+        <option value="7">7 AM - 8AM</option>
+        <option value="8">8 AM - 9AM</option>
+        <option value="9">9 AM - 10AM</option>
+        <option value="10">10 AM - 11AM</option>
+        <option value="11">11 AM - 12PM</option>
+        <option value="12" selected>12 PM - 1PM</option>
+        <option value="13">1 PM - 2PM</option>
+        <option value="14">2 PM - 3PM</option>
+        <option value="15">3 PM - 4PM</option>
+        <option value="16">4 PM - 5PM</option>
+        <option value="17">5 PM - 6PM</option>
+        <option value="18">6 PM - 7PM</option>
+        <option value="19">7 PM - 8PM</option>
+        <option value="20">8 PM - 9PM</option>
+        <option value="21">9 PM - 10PM</option>
+        <option value="22">10 PM - 11PM</option>
+        <option value="23">11 PM - 12AM</option>
+        <option value="24">12 AM - 1AM</option>
+      </select>
+    <br>
+    set Nap Time
+    <select id="napTimeSelector">
+      <option value="1">1 AM - 2AM</option>
+      <option value="2">2 AM - 3AM</option>
+      <option value="3">3 AM - 4AM</option>
+      <option value="4">4 AM - 5AM</option>
+      <option value="5">5 AM - 6AM</option>
+      <option value="6">6 AM - 7AM</option>
+      <option value="7">7 AM - 8AM</option>
+      <option value="8">8 AM - 9AM</option>
+      <option value="9">9 AM - 10AM</option>
+      <option value="10">10 AM - 11AM</option>
+      <option value="11">11 AM - 12PM</option>
+      <option value="12">12 PM - 1PM</option>
+      <option value="13">1 PM - 2PM</option>
+      <option value="14">2 PM - 3PM</option>
+      <option value="15" selected>3 PM - 4PM</option>
+      <option value="16">4 PM - 5PM</option>
+      <option value="17">5 PM - 6PM</option>
+      <option value="18">6 PM - 7PM</option>
+      <option value="19">7 PM - 8PM</option>
+      <option value="20">8 PM - 9PM</option>
+      <option value="21">9 PM - 10PM</option>
+      <option value="22">10 PM - 11PM</option>
+      <option value="23">11 PM - 12AM</option>
+      <option value="24">12 AM - 1AM</option>
+      </select>
+    <br>
+    <button id="partyTimeButton">Party!</button>
 
-</head> 
-<body style="background-color:skyblue; margin: 10px; text-align:center;"> 
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTCXF3B"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<h1>Form Submission</h1> 
-<form name="travel" onsubmit="identify(event)">
-     What is your favorite travel destination?
-    <input name="destination" required="" size="60" type="text"/> 
-    <br><br>
-    Number of times you have been there: <input name="frequency" size="30" type="number"/>
-    <br><br><br> 
-    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
-    <br><br> 
-    <textarea cols="81" name="details" required="" rows="5">
-    </textarea> 
-    <br><br> 
-    Name: <input name="fullname" required="" size="60" type="text"/> 
-    <br><br> 
-    Email: <input name="email" required="" size="60" type="email"/> 
-    <br><br>
-    User ID: <input name="id" required="" size="30" type="text"/> 
-    <br><br>
-    <input name="submit" type="submit" value="Submit"/>
-</form>
-<script type="text/javascript">
-      function identify(e){
-        e.preventDefault();
-        var form = e.target;
-        var email = form["email"].value;
-        var fullname = form["fullname"].value;
-        var destination = form["destination"].value;
-        var details = form["details"].value;
-        var number = form["frequency"].value;
-        var id = form["id"].value;
-        var user = {
-            email: email, 
-            name: fullname, 
-            destination: destination, 
-            details: details,
-            visits: number
-        };
-        analytics.identify(id, {
-            email: email,
-            name: fullname
-        });
-        analytics.track('Destination Submitted', user, function() {
-            window.location.href = "";
-        });
-      }
-</script>
-    
-<button type="button" onclick="anonButton(event)">Anonymous Identify</button>
-<script type="text/javascript">
-    function anonButton(e){
-       analytics.identify({
-            devicId: '123',
-            VcMsId: '456'
-        });
-    } 
-</script>    
-    
-<br>
-<h1>Track Events</h1> 
-<form name="events" onsubmit="testButton(event)">
-    Event Name:
-    <input name="eventname" required="" size="40" type="text"/> 
-    <br>
-    User ID: 
-    <input name="id_two" required="" size="30" type="text"/> 
-    <br>
-    Email: 
-    <input name="email_two" required="" size="60" type="email"/> 
-    <br>
-    <input name="track" type="submit" value="Track"/>
-</form>
-<script type="text/javascript">
-    function testButton(e){
-        e.preventDefault();
-        var formtwo = e.target;
-        var eventName = formtwo["eventname"].value;
-        var emailTwo = formtwo["email_two"].value;
-        var idTwo = formtwo["id_two"].value;
-        var the_properties = {
-            email: emailTwo,
-            age: '30',
-            other_weight: '147',
-            nationality: 'kenyan',
-            age: '26',
-            weight: '142',
-            ethnicity: 'kenyan',
-        };
-        analytics.identify(idTwo, the_properties);
-        analytics.track(eventName, the_properties, function() {
-            window.location.href = "";
-        });
-    }
-</script>
-<h1>Protocols Testing</h1> 
-<button type="button" onclick="secretEntered(event)">Secret Entered</button>
-<script type="text/javascript">
-    function secretEntered(e){
-        analytics.track('Secret Entered', 
-            {
-            source:'magazine', 
-            tomorrow:null});
-    }
-</script>
- <button type="button" onclick="schemaViolation(event)">JSON Schema Violation</button>
-<script type="text/javascript">
-    function schemaViolation(e){
-        analytics.track('Destination Submitted', {hometown: 'New York'});
-    }
-</script>
-<h1>Group Calls</h1> 
-<button type="button" onclick="loc(event)">Location Group</button>
-<script type="text/javascript">
-    function loc(e){
-        analytics.group('123SB', {
-            name: 'My Company',
-            industry: 'Technology',
-            city: 'New York',
-            type: 'location_id',
-            id: '123SB'
-        });
-    }
-</script>
- <button type="button" onclick="acc(event)">Account Group</button>
-<script type="text/javascript">
-    function acc(e){
-        analytics.group('A694', {
-            name: 'My Company',
-            industry: 'Technology',
-            type: 'account_id',
-            id: 'A694'
-        });
-    }
-</script>
-<h1>Page Call with Custom Properties</h1> 
-<button type="button" onclick="page(event)">Page</button>
-<script type="text/javascript">
-    function page(e){
-       analytics.page('Car Feature Added', {
-            vin: '111222333456',
-            model: 'tiguan',
-            photo_added: '1'
-       });  
-    }
-</script>
-</body> 
-<h1>Anonymous User Track Event</h1> 
-<button type="button" onclick="anon(event)">Anonymous Track</button>
-<script type="text/javascript">
-    function anon(e){
-       analytics.track('March 31', {
-            category: 'clothing',
-           email: 'an@email.com'
-       });  
-    }
-</script>
-<h1>Grab braze_id For Anonymous User and Identify</h1> 
-<button type="button" onclick="braze(event)">Braze ID</button>
-<script type="text/javascript">
-   // var deviceid = appboy.getDeviceId(function(deviceId)
-    function braze(e){
-        analytics.identify({
-           test_flag: true
-        },{context: {integrations: {
-           'Braze': {
-               'braze_id': '5e65a780235c1036c27f2b54'
-        }}}});
-    }
-</script>
-</body> 
+    <footer>
+      <p>&copy; Skillcrush 2016</p>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
 </html>
