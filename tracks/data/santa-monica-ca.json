@@ -1,0 +1,28 @@
+{
+  "city": "Santa Monica, CA",
+  "slug": "santa-monica-ca",
+  "region": "Los Angeles County",
+  "summary": "Two synthetic tracks, both on Pico Blvd, both with published or historically public hours.",
+  "tracks": [
+    {
+      "name": "Santa Monica High School (Samohi)",
+      "address": "601 Pico Blvd, Santa Monica, CA 90405",
+      "length_m": 400,
+      "surface": "synthetic",
+      "access": "public",
+      "confidence": "high",
+      "hours": "Mon–Fri 5:00–10:00pm · Sat–Sun 8:00am–10:00pm",
+      "note": "City-permitted community access hours. The most reliable track in Santa Monica."
+    },
+    {
+      "name": "Santa Monica College — Corsair (Morrison) Track",
+      "address": "1900 Pico Blvd, Santa Monica, CA 90405",
+      "length_m": 400,
+      "surface": "synthetic",
+      "access": "restricted",
+      "confidence": "medium",
+      "hours": "Historically open until ~8:30pm",
+      "note": "Closed for a bond-funded renovation through spring 2026 and reopened around April 2026. Hours have not been re-verified since reopening — check before travelling."
+    }
+  ]
+}

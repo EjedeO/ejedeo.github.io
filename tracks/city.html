@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Running tracks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; All cities</a>
+  <header>
+    <p class="kicker" id="city-region"></p>
+    <h1 id="city-name">Loading…</h1>
+    <p class="lede">Tracks are listed most usable first.</p>
+  </header>
+
+  <main id="content" data-page="city"></main>
+
+  <footer>
+    <ul class="legend">
+      <li><span style="color:var(--public)">Open to the public</span></li>
+      <li><span style="color:var(--restricted)">Restricted hours</span></li>
+      <li><span style="color:var(--unconfirmed)">Access unconfirmed</span></li>
+      <li><span style="color:var(--closed)">Not open</span></li>
+    </ul>
+    <p>Access rules change. Where a track is marked unconfirmed, it means nobody has
+      verified it — not that it is open.</p>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

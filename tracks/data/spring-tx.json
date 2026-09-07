@@ -1,0 +1,44 @@
+{
+  "city": "Spring, TX",
+  "slug": "spring-tx",
+  "region": "Greater Houston",
+  "summary": "No park-district track exists here. Every track in Spring sits on school property, so access depends entirely on the individual school.",
+  "tracks": [
+    {
+      "name": "Doerre Intermediate School",
+      "address": "18218 Theiss Mail Rd, Klein, TX 77379",
+      "length_m": 400,
+      "surface": "unknown",
+      "access": "public",
+      "confidence": "high",
+      "note": "Open to the public. Confirmed locally — Klein ISD does not publish a facility-access policy, so this will not appear in any online search."
+    },
+    {
+      "name": "Klein Memorial Stadium",
+      "address": "16607 Stuebner Airline Rd, Klein, TX 77379",
+      "length_m": 400,
+      "surface": "synthetic",
+      "access": "unconfirmed",
+      "confidence": "low",
+      "note": "Klein ISD stadium track. No published public-access policy; stadium tracks are commonly gated outside team use. Call ahead."
+    },
+    {
+      "name": "Leonard George Stadium",
+      "address": "Spring ISD, Spring, TX",
+      "length_m": 400,
+      "surface": "synthetic",
+      "access": "unconfirmed",
+      "confidence": "low",
+      "note": "Spring ISD stadium track. Public access not documented."
+    },
+    {
+      "name": "Planet Ford Stadium",
+      "address": "Spring ISD, Spring, TX",
+      "length_m": 400,
+      "surface": "synthetic",
+      "access": "unconfirmed",
+      "confidence": "low",
+      "note": "Spring ISD stadium track. Public access not documented."
+    }
+  ]
+}

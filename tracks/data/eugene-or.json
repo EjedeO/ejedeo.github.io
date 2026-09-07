@@ -1,0 +1,36 @@
+{
+  "city": "Eugene, OR",
+  "slug": "eugene-or",
+  "region": "Willamette Valley",
+  "summary": "Track Town USA. More tracks than anywhere else on this list, though the most famous one is the least runnable.",
+  "tracks": [
+    {
+      "name": "South Eugene High School",
+      "address": "400 E 19th Ave, Eugene, OR 97401",
+      "length_m": 400,
+      "surface": "all-weather",
+      "access": "public",
+      "confidence": "high",
+      "hours": "Generally open to runners",
+      "note": "Described locally as always open for runners, with its own parking lot. The default choice in Eugene."
+    },
+    {
+      "name": "Lane Community College",
+      "address": "4000 E 30th Ave, Eugene, OR 97405",
+      "length_m": 400,
+      "surface": "synthetic, 8 lanes",
+      "access": "restricted",
+      "confidence": "medium",
+      "note": "Olympic-caliber surface, popular with local runners and coaches as a practice track. No official public-hours policy could be confirmed."
+    },
+    {
+      "name": "Hayward Field (University of Oregon)",
+      "address": "Agate St, Eugene, OR 97403",
+      "length_m": 400,
+      "surface": "world-class synthetic",
+      "access": "closed",
+      "confidence": "high",
+      "note": "Listed as a landmark, not a training option. The University states that public access to the track is not yet determined — assume you cannot run on it."
+    }
+  ]
+}
